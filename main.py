@@ -1,9 +1,8 @@
 import os
-from chunk import Chunk
+from decompress import RegionFile
 
 
 def run():
-    chunk_object = Chunk()
-    chunk_object.load(os.path.join(
+    region_object = RegionFile()
+    print region_object.load(os.path.join(
         '/', 'home', 'josh', '.minecraft', 'saves', 'Server World Redux', 'DIM1', 'region', 'r.0.0.mca'))
-    print chunk_object.pprint()
